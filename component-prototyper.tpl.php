@@ -4,5 +4,6 @@
  *
  * Available variables:
  *  - none
+ */
 ?>
 
