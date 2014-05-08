@@ -8,7 +8,7 @@ function component_prototyper_menu() {
     'title' => 'Component Prototyper',
     'page callback' => 'component_prototyper_prototype',
     'page arguments' => array(1),
-    'access arguments' => array('access content'),
+    'access arguments' => array('view_prototypes'),
     'type' => MENU_NORMAL_ITEM,
   );
 
@@ -33,6 +33,17 @@ function component_prototyper_theme() {
         // to use for images.
       ),
       'template' => 'component-prototyper',
+    ),
+  );
+}
+
+/**
+ * Implements hook_permission().
+ */
+function component_prototyper_permission() {
+  return array(
+    'view_prototypes' => array(
+      'title' => t('View Component Prototyper Pages'),
     ),
   );
 }
