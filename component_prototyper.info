@@ -1,0 +1,6 @@
+name = "Component Prototyper"
+description = "Provides a simple page callback with a blank template. Useful for prototyping new components in the target environment."
+package = Development
+core = 7.x
+version = "7.x-1.0"
+

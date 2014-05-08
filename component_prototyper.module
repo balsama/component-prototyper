@@ -1,0 +1,39 @@
+<?php
+/**
+ * Implements hook_menu().
+ */
+function component_prototyper_menu() {
+
+  $items['component-prototyper'] = array(
+    'title' => 'Component Prototyper',
+    'page callback' => 'component_prototyper_prototype',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Callback function for the prototype page.
+ */
+function component_prototyper_prototype() {
+  return theme('component_prototyper');
+}
+
+/**
+ * Implements hook_theme().
+ */
+function component_prototyper_theme() {
+  return array(
+    'component_prototyper' => array(
+      'variables' => array(
+        // @todo It would be nice to pass a managed file to the template here
+        // to use for images.
+      ),
+      'template' => 'component-prototyper',
+    ),
+  );
+}
+
